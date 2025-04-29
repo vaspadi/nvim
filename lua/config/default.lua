@@ -1,6 +1,6 @@
 require("config.lazy")
 
-local opts = { noremap = true, silent = true }
+local opts = { remap = true, silent = true }
 
 vim.opt.undofile = true
 vim.opt.cursorline = true
@@ -11,6 +11,7 @@ vim.o.shellcmdflag = "-s"
 
 vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 vim.keymap.set("t", "jj", [[<C-\><C-n>]], opts)
+vim.keymap.set("t", "оо", [[<C-\><C-n>]], opts)
 vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
 vim.keymap.set("t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
 vim.keymap.set("t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
@@ -59,8 +60,8 @@ vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = tr
 
 -- Buffers
 vim.keymap.set({ "n", "v" }, "<leader>bd", "<cmd>:bd<cr>", opts)
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "H", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "L", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })

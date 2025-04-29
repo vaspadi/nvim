@@ -26,6 +26,7 @@ vim.cmd("nmap <leader>fc :e ~/AppData/Local/nvim/init.lua<cr>") -- open config
 vim.keymap.set("n", "U", "<C-r>", opts) -- Отменить Ctrl + z (u)
 vim.keymap.set("n", "<Esc>", ":nohlsearch<cr>", opts) -- отменить глобальный поиск
 vim.keymap.set("i", "jj", "<Esc>", opts)
+vim.keymap.set("i", "оо", "<Esc>", opts)
 
 -- Clipboard
 vim.keymap.set({ "n", "v" }, "y", '"+y', opts)
