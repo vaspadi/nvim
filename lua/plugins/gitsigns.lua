@@ -1,7 +1,12 @@
 return {
 	"lewis6991/gitsigns.nvim",
-	enabled = false,
+	branch = "fix/issue1300",
 	config = function()
+		-- Удалить знаки диагностики, чтобы не скрывали gitsigns
+		vim.diagnostic.config({
+			signs = false,
+		})
+
 		require("gitsigns").setup({
 			current_line_blame = true,
 			signs = {
@@ -9,7 +14,7 @@ return {
 				-- change = { text = "┃" },
 				delete = { text = "◣" },
 				topdelete = { text = "◤" },
-				changedelete = { text = "◣" },
+				changedelete = { text = "┃" },
 				-- untracked = { text = "┆" },
 			},
 			-- signs = {
@@ -22,7 +27,7 @@ return {
 				-- change = { text = "┃" },
 				delete = { text = "◣" },
 				topdelete = { text = "◤" },
-				changedelete = { text = "◣" },
+				changedelete = { text = "┃" },
 				-- untracked = { text = "┆" },
 			},
 		})
