@@ -60,8 +60,6 @@ vim.keymap.set("n", "<leader>wv", "<C-W>v", { desc = "Split Window Right", remap
 vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
 
 -- Buffers
-vim.keymap.set({ "n", "v" }, "<leader>bD", "<cmd>:bd<cr>", opts)
-vim.keymap.set({ "n", "v" }, "<leader>bd", require("utils.bufdelete").bufdelete, opts)
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "L", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
