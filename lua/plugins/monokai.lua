@@ -12,6 +12,12 @@ return {
 				ExplorerGitAdd = { fg = palette.green },
 			},
 		})
+
+		vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {
+			undercurl = true,
+			fg = palette.grey,
+			sp = palette.pink,
+		})
 	end,
 }
 

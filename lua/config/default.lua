@@ -45,11 +45,18 @@ vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
 	end,
 })
 
+-- Diagnostics
 vim.diagnostic.config({
 	update_in_insert = true,
+	underline = true,
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>:Lazy<cr>", opts)
+vim.keymap.set("n", "<leader>ld", function()
+	vim.diagnostic.open_float()
+end, { desc = "Show diagnostic in float" })
+
+-- Other
+vim.keymap.set({ "n", "v" }, "<leader>ll", "<cmd>:Lazy<cr>", opts)
 vim.keymap.set({ "n", "v" }, "<leader>qq", "<cmd>:qa!<cr>", opts)
 vim.keymap.set({ "i", "n", "v" }, "<C-s>", "<cmd>w<cr>")
 vim.keymap.set({ "n", "v" }, "<leader>uw", "<cmd>set wrap!<cr>")
