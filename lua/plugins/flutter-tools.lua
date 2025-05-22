@@ -1,7 +1,5 @@
 return {
-	-- "nvim-flutter/flutter-tools.nvim",
-	dir = "D:/projects/plugins/flutter-tools.nvim",
-	name = "custom-flutter-tools.nvim",
+	"nvim-flutter/flutter-tools.nvim",
 	ft = "dart",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
