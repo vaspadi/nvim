@@ -83,8 +83,8 @@ vim.keymap.set({ "n", "t" }, "<C-Left>", "<cmd>vertical resize -5<cr>", { desc =
 vim.keymap.set({ "n", "t" }, "<C-Right>", "<cmd>vertical resize +5<cr>", { desc = "Increase Window Width" })
 
 -- Tabs
-vim.keymap.set("n", "<leader>tt", "<cmd>:tabnew<CR>")
+vim.keymap.set("n", "<leader>tn", "<cmd>:tabnew<CR>")
 vim.keymap.set("n", "<leader>td", "<cmd>:tabclose<CR>")
 vim.keymap.set("n", "<leader>to", "<cmd>:tabonly<CR>")
-vim.keymap.set("n", "<leader>tp", "<cmd>:tabprev<CR>")
-vim.keymap.set("n", "<leader>tn", "<cmd>:tabnext<CR>")
+-- vim.keymap.set("n", "<leader>tp", "<cmd>:tabprev<CR>")
+-- vim.keymap.set("n", "<leader>tn", "<cmd>:tabnext<CR>")
