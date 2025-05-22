@@ -1,5 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
+	commit = "ce5e1b5",
 	config = function()
 		-- Удалить знаки диагностики, чтобы не скрывали gitsigns
 		vim.diagnostic.config({
