@@ -2,6 +2,7 @@ return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
+		"jbyuki/one-small-step-for-vimkind",
 		{
 			"theHamsta/nvim-dap-virtual-text",
 			opts = {
@@ -10,8 +11,28 @@ return {
 			},
 		},
 	},
+	config = function()
+		local dap = require("dap")
+		dap.configurations.lua = {
+			{
+				type = "nlua",
+				request = "attach",
+				name = "Attach to running Neovim instance",
+			},
+		}
+
+		dap.adapters.nlua = function(callback, config)
+			callback({ type = "server", host = config.host or "127.0.0.1", port = config.port or 8086 })
+		end
+	end,
 	keys = {
 		-- { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
+		{
+			"<leader>dl",
+			function()
+				require("osv").launch({ port = 8086 })
+			end,
+		},
 		{
 			"<leader>db",
 			function()

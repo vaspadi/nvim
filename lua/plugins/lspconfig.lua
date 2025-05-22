@@ -13,8 +13,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "williamboman/mason.nvim", opts = {} },
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
@@ -23,10 +23,10 @@ return {
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
-					local map = function(keys, func, desc, mode)
-						mode = mode or "n"
-						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
-					end
+					-- local map = function(keys, func, desc, mode)
+					-- 	mode = mode or "n"
+					-- 	vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+					-- end
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
