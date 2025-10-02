@@ -4,3 +4,4 @@
 
 -- vim.o.shellslash = true
 -- vim.g.autoformat = false
+vim.opt.swapfile = false
