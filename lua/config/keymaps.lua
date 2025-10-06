@@ -1,7 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-
 local map = vim.keymap.set
 
 -- <terminal>
@@ -20,15 +16,6 @@ map("t", "<C-_>", function()
   end
 end, { desc = "Hide Terminal" })
 -- </terminal>
-
--- <paste insert>
-map("n", 'pi"', 'di""+P', { desc = "Paste above" })
-map("n", "pi'", "di'\"+P", { desc = "Paste above" })
-map("n", "pib", 'dib"+P', { desc = "Paste above" })
-map("n", "pi(", 'di("+P', { desc = "Paste above" })
-map("n", "pi{", 'di{"+P', { desc = "Paste above" })
-map("n", "pi[", 'di["+P', { desc = "Paste above" })
--- </paste insert>
 
 -- <other>
 map("n", "U", "<C-r>")

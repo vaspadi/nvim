@@ -40,10 +40,8 @@ return {
           enableSnippets = true,
         },
       },
-      -- TODO: Починить открытие devtools
       dev_tools = {
         autostart = true,
-        auto_open_browser = true,
       },
       debugger = {
         enabled = true,
