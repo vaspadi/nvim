@@ -13,6 +13,19 @@
 
 return {
   {
+    "m00qek/baleia.nvim",
+    config = function()
+      vim.g.baleia = require("baleia").setup({})
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "dap-repl",
+        callback = function(args)
+          vim.g.baleia.automatically(args.buf)
+        end,
+      })
+    end,
+  },
+  {
     "theHamsta/nvim-dap-virtual-text",
     keys = {
       {
